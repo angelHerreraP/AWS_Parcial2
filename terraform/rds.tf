@@ -9,7 +9,7 @@ resource "aws_db_instance" "default" {
   engine               = "mysql"
   engine_version       = "8.0"
   instance_class       = "db.t3.micro"
-  name                 = "appdb"
+  db_name                 = "appdb"
   username             = var.db_username
   password             = var.db_password
   db_subnet_group_name = aws_db_subnet_group.default.name
