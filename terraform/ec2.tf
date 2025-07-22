@@ -15,6 +15,6 @@ resource "aws_instance" "web" {
     db_host = aws_db_instance.default.endpoint,
     db_user = var.db_username,
     db_pass = var.db_password,
-    db_name = aws_db_instance.default.name
+    db_name = aws_db_instance.default.db_name
   })
 }
