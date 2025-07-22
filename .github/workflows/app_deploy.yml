@@ -1,0 +1,14 @@
+name: App Deploy
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'app/**'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy App (placeholder)
+        run: echo "Aquí iría el script de deploy remoto a EC2 usando SSH o SSM."
